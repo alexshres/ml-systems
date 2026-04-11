@@ -2,7 +2,7 @@
 @file: matrix.py
 @author: Alex Shrestha
 
-Building a 2D matrix classing using a flat Python list as the underlying storage --- no NumPy.  Implementing just the basics:
+Building a 2D matrix classusing a flat Python list as the underlying storage --- no NumPy.  Implementing just the basics:
 
 Let A = Matrix(rows, cols, data)
 
