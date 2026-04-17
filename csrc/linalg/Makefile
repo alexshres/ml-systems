@@ -11,6 +11,9 @@ all: softmax
 softmax: softmax.o
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
+matrix: matrix.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
 .PHONY: clean
 clean:
-	rm -f softmax.o softmax
+	rm -f softmax.o softmax matrix.o matrix
