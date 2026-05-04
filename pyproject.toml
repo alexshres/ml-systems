@@ -13,13 +13,14 @@ requires-python = ">=3.11"
 dependencies = [
     "einops>=0.8.2",
     "flax>=0.12.6",
-    "jax>=0.9.2",
+    "jax[cuda12]>=0.9.2",
     "jaxlib>=0.9.2",
     "jaxtyping>=0.3.9",
     "matplotlib>=3.10.8",
     "numpy>=2.4.4",
     "pillow>=12.1.1",
     "ruff>=0.15.8",
+    "seaborn>=0.13.2",
     "torch>=2.11.0",
     "torchinfo>=1.8.0",
     "torchvision>=0.26.0",
@@ -35,3 +36,12 @@ dev = [
     "pytest>=9.0.2",
     "ruff>=0.15.8",
 ]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
